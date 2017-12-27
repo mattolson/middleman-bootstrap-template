@@ -1,0 +1,129 @@
+/* IE upgrade overlay */
+#ie-warning-overlay {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+  filter: alpha(opacity=90);
+  background-color: #f1f1f1;
+
+  #ie-warning {
+    position: relative;
+    z-index: 2001;
+    border: #000 1px solid;
+    padding: 20px; 
+    background-color: #fff;
+    color: #4f4f4f;
+    font-family: 'Lucida Grande','Lucida Sans Unicode',Arial,Verdana,sans-serif;
+    list-style-type: none;
+    margin: 50px auto;
+    width: 650px;
+    height: 300px;
+
+    h1 {
+      margin-bottom: 0.5em;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0 auto;
+      list-style: none none outside;
+
+      li {
+        background: image-url("browser_warning_bg.gif") no-repeat left top;
+        float: left;
+        margin: 0 5px;
+        width: 120px;
+        height: 122px;
+        cursor: pointer;
+        
+        a {
+          display: block;
+          width: 120px;
+          height: 122px;
+          cursor: pointer;
+        }
+
+        img {
+          margin: 0 10px;
+          width: 100px;
+          height: 100px;
+        }
+
+        p {
+          font-size: 0.8em;
+          margin: 0 auto;
+          width: 120px;
+          color: #808080;
+          line-height: 17px;
+          height: 18px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+/* Lists */
+ul.plain, ol.plain {
+  list-style: none;
+  padding-left: 0;
+  li {
+    margin-top: 0.5em;
+  }
+}
+
+/* Misc */
+.clear {
+  clear: both;
+}
+
+/* Blog articles */
+div.articles {
+  hr {
+    margin: 2em 0 3em 0;
+    border-color: #e1e1e1;
+    border-style: dotted;     
+  }
+}  
+
+ul.read_next {                
+  list-style: none;           
+  border-top: 1px solid #e1e1e1;  
+  padding-top: 1em;
+  margin-top: 2em;
+  li { 
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    a {
+      text-transform: uppercase;      
+    }
+    &:last-child {
+      text-align: right;
+    }
+  }
+}
+
+aside {
+  ul {
+    list-style: none;
+  }
+
+  ul.credit{
+    margin-top: 0px;
+    time {
+      display: block;
+    }
+  }
+
+  ul.tags li {
+    display: inline;
+  }
+}

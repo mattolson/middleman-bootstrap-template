@@ -1,0 +1,16 @@
+/* TEAM */
+Developer: My name
+Site: http://mysite.com
+Twitter: @myhandle
+Location: Any town, USA
+
+/* THANKS */
+Middleman: http://middlemanapp.com
+Middleman Bootstrap Template: https://github.com/mattolson/middleman-bootstrap-template
+Bootstrap: https://getbootstrap.com/
+Font Awesome: http://fortawesome.github.com/Font-Awesome
+
+/* SITE */
+Standards: HTML5, CSS3
+Components: Bootstrap, jQuery, Font Awesome, respond.js, html5 shiv
+
