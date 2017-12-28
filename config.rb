@@ -27,15 +27,15 @@ end
 
 activate :blog do |blog|
   blog.prefix = '/blog'
-  blog.permalink = ':year/:month/:day/:title.html'
-  blog.sources = ':year-:month-:day-:title.html'
-  blog.taglink = 'tags/:tag.html'
+  blog.permalink = '{year}/{month}/{day}/{title}.html'
+  blog.sources = '{year}-{month}-{day}-{title}.html.md'
+  blog.taglink = 'tags/{tag}.html'
   blog.layout = 'article'
   blog.summary_separator = /(READMORE)/
   blog.summary_length = 250
-  blog.year_link = ':year.html'
-  blog.month_link = ':year/:month.html'
-  blog.day_link = ':year/:month/:day.html'
+  blog.year_link = '{year}.html'
+  blog.month_link = '{year}/{month}.html'
+  blog.day_link = '{year}/{month}/{day}.html'
   blog.default_extension = 'md'
 
   blog.tag_template = '/blog/tag.html'
@@ -43,7 +43,7 @@ activate :blog do |blog|
 
   blog.paginate = true
   blog.per_page = 1
-  blog.page_link = 'page/:num'
+  blog.page_link = 'page/{num}'
 end
 
 # Setup blog feed

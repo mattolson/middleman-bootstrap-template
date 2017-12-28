@@ -14,7 +14,7 @@ gem 'rails-assets-popper.js', source: 'https://rails-assets.org'
 gem 'rails-assets-modernizr', source: 'https://rails-assets.org'
 gem 'font-awesome-sass', '~> 4.7.0'
 
-gem 'builder', '~> 3.2.0' # for feed.xml
+gem 'builder', '~> 3.2.0' # for feed.xml and sitemap.xml
 gem 'nokogiri', '~> 1.8.1' # for blog summaries
 
 # For faster file watcher updates on Windows:
