@@ -88,6 +88,8 @@ GEM
       addressable (~> 2.3)
       middleman-core (~> 4.0)
       tzinfo (>= 0.3.0)
+    middleman-disqus (1.2.0)
+      middleman-core (~> 4.0)
     middleman-sprockets (4.1.1)
       middleman-core (~> 4.0)
       sprockets (>= 3.0)
@@ -139,6 +141,7 @@ DEPENDENCIES
   middleman!
   middleman-autoprefixer (~> 2.7)
   middleman-blog (~> 4.0.2)
+  middleman-disqus (~> 1.2.0)
   middleman-sprockets (~> 4.1.1)
   nokogiri (~> 1.8.1)
   rails-assets-jquery!

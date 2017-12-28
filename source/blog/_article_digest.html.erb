@@ -4,7 +4,7 @@
     <%= article.summary %>
 
     <% if article.summary.length < article.body.length %>
-      <p class="readmore"><%= link_to 'Read more &rarr;', article.url, :class => 'secondary button radius' %></p>
+      <p class="readmore"><%= link_to 'Read more &rarr;', article.url, :class => 'btn btn-secondary' %></p>
     <% end %>
   </article>
 

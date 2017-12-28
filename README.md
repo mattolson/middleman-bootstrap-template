@@ -1,20 +1,19 @@
 # middleman-bootstrap-template
 
-This is a [project template](https://middlemanapp.com/advanced/project-templates/) for the excellent [Middleman](http://middlemanapp.com/)
-static site generator that incorporates [Bootstrap 4](https://getbootstrap.com) and reasonable defaults for building out a blog.
+This is a [project template](https://middlemanapp.com/advanced/project-templates/) for the [Middleman v4](http://middlemanapp.com/)
+static site generator that incorporates [Bootstrap v4](https://getbootstrap.com) and reasonable defaults for building out a blog.
 
 ## Features
 
 * [middleman-blog 4.0](https://github.com/middleman/middleman-blog)
 * [middleman-sprockets 4.1](https://github.com/middleman/middleman-sprockets)
 * [middleman-autoprefixer 2.7](https://github.com/middleman/middleman-autoprefixer)
+* [middleman-disqus 1.2](https://github.com/simonrice/middleman-disqus) for Disqus integration
 * [Twitter Bootstrap 4.0](http://foundation.zurb.com/)
 * [Font Awesome 4.7](http://fontawesome.io/)
 * Many elements and defaults from [HTML5 Boilerplate](http://html5boilerplate.com/)
 * A warning overlay presented to older IE browsers (< 10)
 * [Google Analytics](http://www.google.com/analytics/) integration
-* [Disqus](http://disqus.com/) integration
-* Automatic XML Sitemap creation on build
 * A sensible mobile-first starter layout for a blog. You will most likely want to make numerous changes to the styling - I didn't make any assumptions about the design. Don't judge it on its looks, this isn't a theme, it is meant to be a flexible foundation to build on.
 
 ## Installation

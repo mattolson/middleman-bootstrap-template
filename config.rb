@@ -1,16 +1,17 @@
-# Activate and configure extensions
-# https://middlemanapp.com/advanced/configuration/#configuring-extensions
-
-# Autoprefixer extension
-activate :autoprefixer do |prefix|
-  prefix.browsers = 'last 2 versions'
-end
+###
+## Asset settings
+###
 
 # Sprockets asset compilation
 activate :sprockets
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
+
+# Autoprefixer extension
+activate :autoprefixer do |prefix|
+  prefix.browsers = 'last 2 versions'
+end
 
 ###
 ## Blog settings
@@ -43,42 +44,30 @@ page '/blog/feed.xml'
 # Set time zone so blog feed works properly
 Time.zone = 'America/Los_Angeles'
 
-# Layouts
-# https://middlemanapp.com/basics/layouts/
+# Disqus extension
+configure :development do
+  activate :disqus do |d|
+    # Set Disqus short name for local development. Read the following for more info:
+    # https://github.com/simonrice/middleman-disqus#important-do-not-use-real-shortnames-during-development
+    d.shortname = SecureRandom.uuid # replace with your short name for dev
+  end
+end
 
 # Per-page layout changes
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
-# With alternative layout
-# page '/path/to/file.html', layout: 'other_layout'
-
-# Proxy pages
-# https://middlemanapp.com/advanced/dynamic-pages/
-
-# proxy(
-#   '/this-page-has-no-template.html',
-#   '/template-file.html',
-#   locals: {
-#     which_fake_page: 'Rendering a fake page with a local variable'
-#   },
-# )
-
-# Helpers
-# Methods defined in the helpers block are available in templates
-# https://middlemanapp.com/basics/helper-methods/
-
-# helpers do
-#   def some_helper
-#     'Helping'
-#   end
-# end
-
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
-
 configure :build do
   activate :minify_css
   activate :minify_javascript
+
+  # Set production settings for Disqus
+  activate :disqus do |d|
+    # Set Disqus short name for production. Read the following for more info:
+    # https://github.com/simonrice/middleman-disqus#important-do-not-use-real-shortnames-during-development
+    d.shortname = nil # replace with your short name for prod
+  end
 end
