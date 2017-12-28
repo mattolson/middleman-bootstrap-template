@@ -13,6 +13,7 @@ foundation to build on.
 * [middleman-autoprefixer 2.7](https://github.com/middleman/middleman-autoprefixer)
 * [middleman-disqus 1.2](https://github.com/simonrice/middleman-disqus) for Disqus integration
 * [middleman-google-analytics 3.0](https://github.com/danielbayerlein/middleman-google-analytics) for Google Analytics integration
+* [middleman-syntax 3.0](https://github.com/middleman/middleman-syntax) for code syntax highlighting
 * [Twitter Bootstrap 4.0](http://foundation.zurb.com/)
 * [Font Awesome 4.7](http://fontawesome.io/)
 * Many elements and defaults from [HTML5 Boilerplate](http://html5boilerplate.com/)

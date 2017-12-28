@@ -1,3 +1,6 @@
+# Use kramdown for md rendering
+set :markdown_engine, :kramdown
+
 # Per-page layout changes
 page '/*.xml', layout: false
 page '/*.json', layout: false
@@ -96,6 +99,11 @@ activate :google_analytics do |ga|
   # Output style - :html includes <script> tag (default = :html)
   # ga.output = :js
 end
+
+###
+## Syntax highlighting for code samples
+###
+activate :syntax
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
