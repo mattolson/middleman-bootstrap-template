@@ -17,6 +17,7 @@ foundation to build on.
 * [Twitter Bootstrap 4.0](http://foundation.zurb.com/)
 * [Font Awesome 4.7](http://fontawesome.io/)
 * Many elements and defaults from [HTML5 Boilerplate](http://html5boilerplate.com/)
+* Automatic sitemap.xml generation on build
 * A warning overlay presented to older IE browsers (< 10)
 
 ## Installation
