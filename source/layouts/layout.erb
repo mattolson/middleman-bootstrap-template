@@ -4,20 +4,20 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="copyright" content="" />
     <link type="text/plain" rel="author" href="/humans.txt" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-    <meta http-equiv="cleartype" content="on">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="cleartype" content="on" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title><%= data.page.title || "My Blog" %></title>
+    <title><%= current_page.data.title || "My Blog" %></title>
 
     <%= stylesheet_link_tag "application" %>
     <%= yield_content :stylesheets %>
@@ -34,97 +34,77 @@
     <%= yield_content :head %>
   </head>
   <body>
+    <div class="container">
+      <!-- Logo & Top Nav -->
+      <div class="row">
+        <div class="col-3">
+          <h1><%= link_to image_tag('http://placehold.it/250x75&text=My+Blog'), '/' %></h1>
+        </div>
+        <div class="col-9">
+          <ul class="link-list right">
+          </ul>
+        </div>
+      </div>
+      <!-- End Header and Nav -->
 
-    <!-- Logo & Top Nav -->
-    <div class="row">
-      <div class="small-3 columns">
-        <h1><%= link_to image_tag('http://placehold.it/250x75&text=My+Blog'), '/' %></h1>
+      <!-- Main page container -->
+      <%= yield %>
+
+      <!-- Footer -->
+      <footer class="row">
+        <div class="col-sm-12 col-lg-6">
+          <p>&copy; Copyright <%= Date.today.year.to_s %> My Blog</p>
+        </div>
+        <div class="col-sm-12 col-lg-6">
+          <p class="right"><i class="icon-heart"></i> <%= link_to 'Gimme some love.', 'http://github.com/mattolson' %></p>
+        </div>
+      </footer>
+
+      <!--[if lt IE 9]>
+      <div id="ie-warning-overlay">
+        <div id="ie-warning">
+          <h1>Did you know that your copy of Internet Explorer is comically outdated?</h1>
+          <p>
+            To get the best possible experience using our website, we recommend that you upgrade to the latest version or use another web browser. 
+            Any of the following will provide a superior experience, not only on this site, but across the web.
+          </p>
+          <p>Just click one of the icons below to get to the download page.</p>
+          <ul>
+            <li>
+              <a href="http://microsoft.com/ie">
+                <%= image_tag 'browser_ie.gif', alt: 'Download Internet Explorer' %>
+                <p>Internet Explorer 10+</p>
+              </a>
+            </li>
+            <li>
+              <a href="http://mozilla.org/firefox">
+                <%= image_tag 'browser_firefox.gif', alt: 'Download Firefox' %>
+                <p>Firefox</p>
+              </a>
+            </li>
+            <li>
+              <a href="http://google.com/chrome">
+                <%= image_tag 'browser_chrome.gif', alt: 'Download Chrome' %>
+                <p>Google Chrome</p>
+              </a>
+            </li>
+            <li>
+              <a href="http://apple.com/safari">
+                <%= image_tag 'browser_safari.gif', alt: 'Download Safari' %>
+                <p>Safari</p>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="small-9 columns">
-        <ul class="link-list right">
-        </ul>
-      </div>
+      <![endif]-->
     </div>
-    <!-- End Header and Nav -->
-
-    <!-- Main page container -->
-    <div class="row">
-      <div class="small-12 columns">
-        <%= yield %>
-      </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="row">
-      <div class="small-12 large-6 columns">
-        <p>&copy; Copyright <%= Date.today.year.to_s %> My Blog</p>
-      </div>
-      <div class="small-12 large-6 columns">
-        <p class="right"><i class="icon-heart"></i> <%= link_to 'Gimme some love.', 'http://github.com/mattolson' %></p>
-      </div>
-    </footer>
-
-    <!--[if lt IE 9]>
-    <div id="ie-warning-overlay">
-      <div id="ie-warning">
-        <h1>Did you know that your copy of Internet Explorer is terribly out of date?</h1>
-        <p>
-          To get the best possible experience using our website, we recommend that you upgrade to the latest version or use another web browser. 
-          Any of the following will provide a superior experience, not only on this site, but across the web.
-        </p>
-        <p>Just click one of the icons below to get to the download page.</p>
-        <ul>
-          <li>
-            <a href="http://microsoft.com/ie">
-              <%= image_tag 'browser_ie.gif', :alt => "Download Internet Explorer" %>
-              <p>Internet Explorer 9+</p>
-            </a>
-          </li>
-          <li>
-            <a href="http://mozilla.org/firefox">
-              <%= image_tag 'browser_firefox.gif', :alt => "Download Firefox" %>
-              <p>Firefox</p>
-            </a>
-          </li>
-          <li>
-            <a href="http://google.com/chrome">
-              <%= image_tag 'browser_chrome.gif', :alt => "Download Chrome" %>
-              <p>Google Chrome</p>
-            </a>
-          </li>
-          <li>
-            <a href="http://apple.com/safari">
-              <%= image_tag 'browser_safari.gif', :alt => "Download Safari" %>
-              <p>Safari</p>
-            </a>
-          </li>
-          <li>
-            <a href="http://opera.com">
-              <%= image_tag 'browser_opera.gif', :alt => "Download Opera" %>
-              <p>Opera</p>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <![endif]-->
-
-    <script>
-      document.write('<script src=' +
-        ('__proto__' in {} ? "<%= asset_path :js, 'zepto' %>" : "<%= asset_path :js, 'jquery' %>") +
-        '><\/script>')
-    </script>
 
     <!-- Javascript -->
-    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag 'application' %>
     <%= yield_content :javascripts %>
 
     <script>
-      $(document).ready(function () {
-        <%= yield_content :onready %>
-        $(document).foundation();
-      });
-
       // TODO: Set your Google Analytics code here
       var _gaq=[['_setAccount','UA-'],['_trackPageview']];
       (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'));

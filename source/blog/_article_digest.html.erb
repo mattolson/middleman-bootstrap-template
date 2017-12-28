@@ -1,0 +1,12 @@
+<div class="row">
+  <article class="col-sm-12 col-lg-9">
+    <h3><%= link_to article.title, article %></h3>
+    <%= article.summary %>
+
+    <% if article.summary.length < article.body.length %>
+      <p class="readmore"><%= link_to 'Read more &rarr;', article.url, :class => 'secondary button radius' %></p>
+    <% end %>
+  </article>
+
+  <%= partial '/blog/article_sidebar', locals: { article: article } %>
+</div>

@@ -6,7 +6,7 @@ pageable: true
     <% if i > 0 %>
       <hr />
     <% end %>
-    <%= partial '/blog/article', locals: { article: article, digest: true } %>
+    <%= partial '/blog/article_digest', locals: { article: article } %>
   <% end %>
 </div>
 

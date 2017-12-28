@@ -6,6 +6,43 @@ activate :autoprefixer do |prefix|
   prefix.browsers = 'last 2 versions'
 end
 
+# Sprockets asset compilation
+activate :sprockets
+set :css_dir, 'stylesheets'
+set :js_dir, 'javascripts'
+set :images_dir, 'images'
+
+# Set time zone
+Time.zone = "America/Los_Angeles"
+
+###
+## Blog settings
+###
+
+activate :blog do |blog|
+  blog.prefix = '/blog'
+  blog.permalink = ':year/:month/:day/:title.html'
+  blog.sources = ':year-:month-:day-:title.html'
+  blog.taglink = 'tags/:tag.html'
+  blog.layout = 'article'
+  blog.summary_separator = /(READMORE)/
+  blog.summary_length = 250
+  blog.year_link = ':year.html'
+  blog.month_link = ':year/:month.html'
+  blog.day_link = ':year/:month/:day.html'
+  blog.default_extension = 'md'
+
+  blog.tag_template = '/blog/tag.html'
+  blog.calendar_template = '/blog/calendar.html'
+
+  blog.paginate = true
+  blog.per_page = 5
+  blog.page_link = 'page/:num'
+end
+
+# Setup blog feed
+page '/blog/feed.xml'
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
@@ -41,7 +78,7 @@ page '/*.txt', layout: false
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
-# configure :build do
-#   activate :minify_css
-#   activate :minify_javascript
-# end
+configure :build do
+  activate :minify_css
+  activate :minify_javascript
+end
