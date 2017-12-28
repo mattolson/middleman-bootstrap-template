@@ -34,7 +34,7 @@ This template is also a good starting point for sites that don't have a blog. To
 
 1. `git rm source/blog/*`
 2. `git rm source/layouts/article.erb`
-3. Remove middleman-blog and middleman-disqus from Gemfile.
-4. Remove blog-related styles from source/stylesheets/base.css.scss. They are all at the bottom of the file grouped together under the header "Blog Articles".
-5. Remove blog-related settings from config.rb. They are all grouped at the top under the header "Blog Settings".
-6. Update the home page (source/index.html.erb) to do something more relevant to your site.
+3. Remove `middleman-blog` and `middleman-disqus` from `Gemfile`.
+4. Remove blog-related styles from `source/stylesheets/base.css.scss`. They are all at the bottom of the file grouped together under the header "Blog Articles".
+5. Remove blog-related settings from `config.rb`. They are all grouped at the top under the header "Blog Settings".
+6. Update `source/index.html.erb` (the home page) to something more relevant to your site.
