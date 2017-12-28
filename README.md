@@ -1,10 +1,11 @@
 # middleman-bootstrap-template
-This is a [project template](https://middlemanapp.com/advanced/project-templates/) for the [Middleman v4](http://middlemanapp.com/)
-static site generator that incorporates [Bootstrap v4](https://getbootstrap.com) and reasonable defaults for building out a blog.
 
-This is a sensible mobile-first starter layout for a blog. You will most likely want to make numerous changes to the styling.
-I didn't make any assumptions about the design. Don't judge it on its looks, this isn't a theme, it is meant to be a flexible
-foundation to build on.
+middleman-bootstrap-template is a [project template](https://middlemanapp.com/advanced/project-templates/) for the
+[Middleman v4](http://middlemanapp.com/) static site generator that incorporates [Bootstrap v4](https://getbootstrap.com).
+
+This is a sensible mobile-first starter layout for a blog. The styling is basic and based on Bootstrap with only some minor
+additions, because I didn't want to make any assumptions about the design of your site. Don't judge it on its looks&mdash;this
+isn't a theme, it's meant to be a flexible foundation to build on.
 
 ## Features
 
@@ -29,11 +30,11 @@ foundation to build on.
 
 ## Removing blog functionality
 
-This template is also a good starting point for sites that don't require blogging functions. To remove blog-specific stuff:
+This template is also a good starting point for sites that don't have a blog. To remove blog-specific stuff:
 
 1. `git rm source/blog/*`
 2. `git rm source/layouts/article.erb`
-3. Remove middleman-blog from Gemfile.
+3. Remove middleman-blog and middleman-disqus from Gemfile.
 4. Remove blog-related styles from source/stylesheets/base.css.scss. They are all at the bottom of the file grouped together under the header "Blog Articles".
 5. Remove blog-related settings from config.rb. They are all grouped at the top under the header "Blog Settings".
 6. Update the home page (source/index.html.erb) to do something more relevant to your site.
