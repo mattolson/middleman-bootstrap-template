@@ -1,6 +1,9 @@
 # Use kramdown for md rendering
 set :markdown_engine, :kramdown
 
+# Set time zone
+set :time_zone, 'America/Los_Angeles'
+
 # Per-page layout changes
 page '/*.xml', layout: false
 page '/*.json', layout: false
@@ -27,8 +30,8 @@ end
 
 activate :blog do |blog|
   blog.prefix = '/blog'
+  blog.sources = '{year}-{month}-{day}-{title}.html'
   blog.permalink = '{year}/{month}/{day}/{title}.html'
-  blog.sources = '{year}-{month}-{day}-{title}.html.md'
   blog.taglink = 'tags/{tag}.html'
   blog.layout = 'article'
   blog.summary_separator = /(READMORE)/
@@ -42,15 +45,12 @@ activate :blog do |blog|
   blog.calendar_template = '/blog/calendar.html'
 
   blog.paginate = true
-  blog.per_page = 1
-  blog.page_link = 'page/{num}'
+  blog.per_page = 5
+  blog.page_link = 'p{num}'
 end
 
 # Setup blog feed
 page '/blog/feed.xml'
-
-# Set time zone so blog feed works properly
-Time.zone = 'America/Los_Angeles'
 
 ###
 ## Disqus settings

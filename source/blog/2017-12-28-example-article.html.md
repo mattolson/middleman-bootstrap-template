@@ -1,9 +1,9 @@
 ---
 title: Lorem Ipsum
-date: 2018-01-01
-tags: 
-- example
-- latin
+date: 2017-12-28
+tags:
+  - example
+  - latin
 ---
 This is an example article. You probably want to delete it and write your own articles!
 
