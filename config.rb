@@ -41,7 +41,7 @@ end
 page '/blog/feed.xml'
 
 # Set time zone so blog feed works properly
-Time.zone = "America/Los_Angeles"
+Time.zone = 'America/Los_Angeles'
 
 # Layouts
 # https://middlemanapp.com/basics/layouts/

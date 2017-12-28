@@ -145,7 +145,7 @@ DEPENDENCIES
   rails-assets-modernizr!
   rails-assets-popper.js!
   tzinfo-data
-  wdm (~> 0.1)
+  wdm (~> 0.1.0)
 
 BUNDLED WITH
    1.14.6
