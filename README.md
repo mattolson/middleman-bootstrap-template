@@ -20,8 +20,9 @@ static site generator that incorporates [Bootstrap 4](https://getbootstrap.com) 
 ## Installation
 
 1. Install middleman as usual. See [Middleman's documentation](https://middlemanapp.com/basics/install/) for more information.
-2. `middleman init -T mattolson/middleman-bootstrap-template my_project`
-3. `cd my_project && middleman server`
+2. `middleman init -B -T mattolson/middleman-bootstrap-template my_project`
+3. `cd my_project && bundle install`
+4. `middleman server`
 
 ## Removing blog functionality
 
