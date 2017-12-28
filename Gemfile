@@ -5,6 +5,7 @@ gem 'middleman-blog', '~> 4.0.2'
 gem 'middleman-sprockets', '~> 4.1.1'
 gem 'middleman-autoprefixer', '~> 2.7'
 gem 'middleman-disqus', '~> 1.2.0'
+gem 'middleman-google-analytics', '~> 3.0.0'
 
 gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'rails-assets-jquery', source: 'https://rails-assets.org'
