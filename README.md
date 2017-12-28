@@ -7,6 +7,9 @@ This is a sensible mobile-first starter layout for a blog. The styling is basic 
 additions, because I didn't want to make any assumptions about the design of your site. Don't judge it on its looks&mdash;this
 isn't a theme, it's meant to be a flexible foundation to build on.
 
+Since you have access to Bootstrap v4, there are many [high quality themes](https://wrapbootstrap.com/themes/blogs-magazines?branch=4.x)
+you can purchase and easily integrate.
+
 ## Features
 
 * [middleman-blog 4.0](https://github.com/middleman/middleman-blog)
@@ -20,6 +23,10 @@ isn't a theme, it's meant to be a flexible foundation to build on.
 * Many elements and defaults from [HTML5 Boilerplate](http://html5boilerplate.com/)
 * Automatic sitemap.xml generation on build
 * A warning overlay presented to older IE browsers (< 10)
+
+## Demo
+
+I have published a [demo site to S3](http://middleman-bootstrap.s3-website-us-east-1.amazonaws.com). Check it out!
 
 ## Installation
 
