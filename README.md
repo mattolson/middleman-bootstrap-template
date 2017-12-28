@@ -6,8 +6,10 @@ static site generator that incorporates [Bootstrap 4](https://getbootstrap.com) 
 ## Features
 
 * [middleman-blog 4.0](https://github.com/middleman/middleman-blog)
+* [middleman-sprockets 4.1](https://github.com/middleman/middleman-sprockets)
+* [middleman-autoprefixer 2.7](https://github.com/middleman/middleman-autoprefixer)
 * [Twitter Bootstrap 4.0](http://foundation.zurb.com/)
-* [Font Awesome 5.0](http://fontawesome.io/)
+* [Font Awesome 4.7](http://fontawesome.io/)
 * Many elements and defaults from [HTML5 Boilerplate](http://html5boilerplate.com/)
 * A warning overlay presented to older IE browsers (< 10)
 * [Google Analytics](http://www.google.com/analytics/) integration

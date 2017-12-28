@@ -5,26 +5,24 @@
 
     <% if article.article_previous || article.article_next %>
       <ul class="read_next">
-        <% if article.article_previous %>
-          <li><%= link_to("<i class='icon-caret-left'></i> #{article.article_previous.title}", article.article_previous) %></li>
-        <% end %>
-        <% if article.article_next %>
-          <li><%= link_to("#{article.article_next.title} <i class='icon-caret-right'></i>", article.article_next) %></li>
-        <% end %>
+        <li>
+          <% if article.article_previous %>
+            <%= link_to("<i class='fa fa-caret-left'></i> #{article.article_previous.title}", article.article_previous) %>
+          <% else %>
+            &nbsp;
+          <% end %>
+        </li>
+        <li>
+          <% if article.article_next %>
+            <%= link_to("#{article.article_next.title} <i class='fa fa-caret-right'></i>", article.article_next) %>
+          <% else %>
+            &nbsp;
+          <% end %>
+        </li>
       </ul>
     <% end %>
-
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-      var disqus_shortname = 'TODO_REPLACE_ME';
-      (function() {
-       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-       dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-       })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+    <%= partial '/blog/disqus' %>
   </article>
 
   <%= partial '/blog/article_sidebar', locals: { article: article } %>

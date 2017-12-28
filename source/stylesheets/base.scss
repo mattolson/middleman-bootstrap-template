@@ -92,8 +92,8 @@ div.articles {
 ul.read_next {                
   list-style: none;           
   border-top: 1px solid #e1e1e1;  
-  padding-top: 1em;
-  margin-top: 2em;
+  padding: 1em 0;
+  margin: 2em 0;
   li { 
     margin: 0;
     padding: 0;
@@ -126,4 +126,8 @@ aside {
   ul.tags li {
     display: inline;
   }
+}
+
+.right {
+  text-align: right;
 }

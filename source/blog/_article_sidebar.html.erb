@@ -4,7 +4,7 @@
   </ul>
   <ul class="tags">
     <% article.tags.each do |tag| %>
-      <li><%= link_to tag, tag_path(tag), :class => 'tiny button secondary round' %></li>
+      <li><%= link_to tag, tag_path(tag), class: 'badge badge-secondary' %></li>
     <% end %>
   </ul>
 </aside>

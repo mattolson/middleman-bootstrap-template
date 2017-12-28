@@ -12,9 +12,6 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
-# Set time zone
-Time.zone = "America/Los_Angeles"
-
 ###
 ## Blog settings
 ###
@@ -36,12 +33,15 @@ activate :blog do |blog|
   blog.calendar_template = '/blog/calendar.html'
 
   blog.paginate = true
-  blog.per_page = 5
+  blog.per_page = 1
   blog.page_link = 'page/:num'
 end
 
 # Setup blog feed
 page '/blog/feed.xml'
+
+# Set time zone so blog feed works properly
+Time.zone = "America/Los_Angeles"
 
 # Layouts
 # https://middlemanapp.com/basics/layouts/

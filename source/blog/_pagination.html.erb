@@ -1,13 +1,13 @@
 <% if paginate && num_pages > 1 %>
-  <div class="pagination-centered">
-    <ul class="pagination">
+  <nav>
+    <ul class="pagination pagination-sm justify-content-center">
       <% if prev_page %>
-        <li class="arrow<%= prev_page.nil? ? ' unavailable' : '' %>"><%= link_to '&laquo; Newer', prev_page %></li>
+        <li class="page-item"><%= link_to '&laquo; Newer Posts', prev_page, class: 'page-link' %></li>
       <% end %>
       <%
         (1..num_pages).each do |i|
           if i == page_number %>
-            <li class="current unavailable"><%= link_to "#{i}", '#' %></li>
+            <li class="page-item disabled"><%= link_to i.to_s, '#', class: 'page-link' %></li>
           <% else
             p = nil
             if i < page_number
@@ -15,13 +15,15 @@
             else
               (page_number...i).each do p = p ? p.metadata[:locals]['next_page'] : next_page; end
             end
+            if p
             %>
-            <li><%= link_to "#{i}", p && p.url %></li>
+              <li class="page-item"><%= link_to "#{i}", p.url, class: 'page-link' %></li>
+            <% end %>
           <% end %>
-        <% end %>
-        <% if next_page %>
-          <li class="arrow<%= next_page.nil? ? ' unavailable' : '' %>"><%= link_to 'Older &raquo;', next_page %></li>
-        <% end %>
+      <% end %>
+      <% if next_page %>
+        <li class="page-item"><%= link_to 'Older Posts &raquo;', next_page, class: 'page-link' %></li>
+      <% end %>
     </ul>
-  </div>
+  </nav>
 <% end %>

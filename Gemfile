@@ -9,6 +9,7 @@ gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'rails-assets-jquery', source: 'https://rails-assets.org'
 gem 'rails-assets-popper.js', source: 'https://rails-assets.org'
 gem 'rails-assets-modernizr', source: 'https://rails-assets.org'
+gem 'font-awesome-sass', '~> 4.7.0'
 
 gem 'builder', '~> 3.2.0' # for feed.xml
 gem 'nokogiri', '~> 1.8.1' # for blog summaries

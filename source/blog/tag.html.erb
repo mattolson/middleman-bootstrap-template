@@ -1,17 +1,19 @@
 ---
 pageable: true
 ---
-<ul class="breadcrumbs">
-  <li><a href="/">Home</a></li>
-  <li class="current"><a href="<%= tag_path tagname %>"><%= tagname %></a></li>
-</ul>
+<nav aria-label="breadcrumb" role="navigation">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><%= tagname %></li>
+  </ol>
+</nav>
 
 <div class="articles">
   <% page_articles.each_with_index do |article, i| %>
     <% if i > 0 %>
       <hr />
     <% end %>
-    <%= partial '/blog/article', :locals => {:article => article, :digest => true} %>
+    <%= partial '/blog/article_digest', locals: { article: article } %>
   <% end %>
 </div>
 
